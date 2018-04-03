@@ -1,20 +1,29 @@
-<div>
-  <div>
-    <h1>Details of the gnome tal!</h1>
+<div class="gencontainer">
+
+  <div class="container">
+    <div class ="titlegnome">
+      <div class= "titlegnome__title">
+        <h1> {{ contact.name }} </h1>
+      </div>
+      <p>{{ contact.professions}}</p>
+      <p>{{ contact.age }} years old</p>
+
+    </div>
+    <div class ="containergnome">
+      <figure class="containergnome__shape">
+        <img src="{{ contact.thumbnail }}" class="containergnome__img">
+      </figure>
+    </div>
+    <div class ="infognome">
+      <ul>
+        <li>{{ contact.hair_color }} hair color </li>
+        <li>{{ contact.weight | number : '1.2-2' }} kg. - {{ contact.height | number : '1.2-2'}} cm.</li>
+        <li>Friends: {{ contact.friends }}</li>
+      </ul>
+    </div>
   </div>
-  <div>
-    <img src="" alt="">
+  <div class ="goback"  >
+    <button class="btn-inline"><span routerLink="/"> <<< Go Back!</span>  </button>
   </div>
-  <div>
-    <ul let contact >
-      <li>name: {{ contact.name }}</li>
-      <li>id:</li>
-      <li>age:</li>
-      <li>weight:</li>
-      <li>height:</li>
-      <li>hair color:</li>
-      <li>professions: {{ contact.name }}</li>
-      <li>friends: {{ contact.name }}</li>
-    </ul>
-  </div>
+
 </div>

@@ -11,7 +11,15 @@ import { AppService } from '../app.service';
 export class DetailComponent implements OnInit {
   data: any
   id: number;
-  contact: any = {id:'', name:''}
+  contact: any = {age:'',
+                  friends: '',
+                  hair_color: '',
+                  height: '',
+                  id:'',
+                  name:'',
+                  professions: '',
+                  thumbnail:'',
+                  weight:''}
 
   constructor(  private appService: AppService,
                 private route: ActivatedRoute) {

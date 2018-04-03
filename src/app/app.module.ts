@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { ListComponent } from './list/list.component';
 import { ListsComponent } from './lists/lists.component';
 import { DetailComponent } from './detail/detail.component';
 import { FilterPipe } from './lists/filter.pipe';
@@ -17,12 +16,9 @@ const appRoutes: Routes = [
   {path: ':id', component: DetailComponent},
 ]
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
-    ListComponent,
     ListsComponent,
     DetailComponent,
     FilterPipe
