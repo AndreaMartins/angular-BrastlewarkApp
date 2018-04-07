@@ -3,26 +3,21 @@
     <h1>
       Brastlewark!
     </h1>
-
     <div class="search">
-      <input type="text" placeholder="  Search Gnome by age" [(ngModel)]= "filteredName">
+      <input type="text" placeholder="  Search Gnome by age" [(ngModel)]="filteredName">
     </div>
   </div>
 </nav>
-
-
-<div class = "listcontainer" >
-  <div
-    *ngFor="let contact of data | filter:filteredName:'age'; let i = index"
-    class="containergnome">
+<div class="listcontainer">
+  <div *ngFor="let contact of data | filter:filteredName:'age'; let i = index" class="containergnome">
     <div [routerLink]="[i]" class="containergnome__item">
-        <figure class="containergnome__shape">
-          <img src={{contact.thumbnail}} class="containergnome__img">
-          <figcaption class="containergnome__caption"> + details</figcaption>
-        </figure>
+      <figure class="containergnome__shape">
+        <img src={{contact.thumbnail}} class="containergnome__img">
+        <figcaption class="containergnome__caption"> + details</figcaption>
+      </figure>
     </div>
     <div>
-      <p [routerLink]="[i]" class ="containergnome__font" >{{contact.name}}</p>
+      <p [routerLink]="[i]" class="containergnome__font">{{contact.name}}</p>
     </div>
   </div>
 </div>

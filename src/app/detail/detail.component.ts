@@ -8,30 +8,32 @@ import { AppService } from '../app.service';
   styleUrls: ['./detail.component.css'],
   providers: [AppService]
 })
-export class DetailComponent implements OnInit {
-  data: any
-  id: number;
-  contact: any = {age:'',
-                  friends: '',
-                  hair_color: '',
-                  height: '',
-                  id:'',
-                  name:'',
-                  professions: '',
-                  thumbnail:'',
-                  weight:''}
 
-  constructor(  private appService: AppService,
-                private route: ActivatedRoute) {
+export class DetailComponent implements OnInit {
+
+  data: any;
+  id: number;
+  contact: any = {
+    age: '',
+    friends: '',
+    hair_color: '',
+    height: '',
+    id: '',
+    name: '',
+    professions: '',
+    thumbnail: '',
+    weight: ''
+  }
+
+  constructor(private appService: AppService,
+    private route: ActivatedRoute) {
   }
 
   ngOnInit() {
-
     this.getContacts();
-
   }
 
-  getParams(){
+  getParams() {
     this.route.params
       .subscribe(
         (params: Params) => {
@@ -44,17 +46,15 @@ export class DetailComponent implements OnInit {
 
   getContacts() {
     this.appService.getData().subscribe(
-        (data: any ) => {
-          this.data = data.Brastlewark;
-          this.getParams();
-        },
-        (error) =>console.log(error),
-      );
-
+      (data: any) => {
+        this.data = data.Brastlewark;
+        this.getParams();
+      },
+      (error) => console.log(error),
+    );
   }
 
-  getContact(index:number) {
-    console.log(this.data);
+  getContact(index: number) {
     return this.data[index];
   }
 

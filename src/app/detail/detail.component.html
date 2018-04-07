@@ -1,20 +1,18 @@
 <div class="gencontainer">
-
   <div class="container">
-    <div class ="titlegnome">
-      <div class= "titlegnome__title">
+    <div class="titlegnome">
+      <div class="titlegnome__title">
         <h1> {{ contact.name }} </h1>
       </div>
       <p>{{ contact.professions}}</p>
       <p>{{ contact.age }} years old</p>
-
     </div>
-    <div class ="containergnome">
+    <div class="containergnome">
       <figure class="containergnome__shape">
         <img src="{{ contact.thumbnail }}" class="containergnome__img">
       </figure>
     </div>
-    <div class ="infognome">
+    <div class="infognome">
       <ul>
         <li>{{ contact.hair_color }} hair color </li>
         <li>{{ contact.weight | number : '1.2-2' }} kg. - {{ contact.height | number : '1.2-2'}} cm.</li>
@@ -22,8 +20,7 @@
       </ul>
     </div>
   </div>
-  <div class ="goback"  >
+  <div class="goback">
     <button class="btn-inline"><span routerLink="/"> <<< Go Back!</span>  </button>
   </div>
-
 </div>

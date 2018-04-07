@@ -8,12 +8,12 @@ import { AppComponent } from './app.component';
 import { ListsComponent } from './lists/lists.component';
 import { DetailComponent } from './detail/detail.component';
 import { FilterPipe } from './lists/filter.pipe';
-import { AppService} from './app.service';
+import { AppService } from './app.service';
 
 
 const appRoutes: Routes = [
-  {path: '', component: ListsComponent},
-  {path: ':id', component: DetailComponent},
+  { path: '', component: ListsComponent },
+  { path: ':id', component: DetailComponent },
 ]
 
 @NgModule({
@@ -32,4 +32,5 @@ const appRoutes: Routes = [
   providers: [AppService],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
